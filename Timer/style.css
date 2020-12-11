@@ -1,14 +1,168 @@
 body{
-    display: flex;
+    /* display: flex;  */
     justify-content: center;
     align-items: center;
-    margin-top: 40vh;
+    margin-top: 20vh;
     background: rgb(36,0,0);
     background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,16,1) 100%);
 }
+h1
+{
+    font-family: "Segoe UI", sans-serif;
+	margin:0px;
+	margin-top:10px;
+	color:#ececec;
+    font-size:45px;
+    text-align:center;
+}
 #countdownTimer{
-    color: white;
+    /* color: white;
     font-size: 5rem;
     font-weight: 800;
-    font-family: sans-serif;
+    font-family: sans-serif; */
+    background: #10101E;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px; 
+    padding: 15px 10px;
+    border: 3px solid #e32e2e;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
 }
+#countdownTimer:hover{
+    background: #e32e2e;
+    box-shadow: 0 0 30px #e32e2e;
+  }
+#input{
+    display: block;
+}
+
+/* #panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    
+    color: white;
+    
+    margin: auto;
+  } */
+  
+  #panel {
+    display: none;
+  }
+  .datetime{
+    color: #fff;
+    
+    font-family: "Segoe UI", sans-serif;
+    /* width: 340px; */
+    align-items: center;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+  }
+  
+  .datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+  }
+  .time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time span:last-child{
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+
+  /*login form css*/
+.form{
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    opacity: 99%;
+    max-width: 260px;
+    margin: 20px auto 100px;
+    padding: 45px 45px 30px 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+.form p{
+    font-size: 15px;
+    padding: 1px;
+    text-align: center;
+}
+.form input{
+    outline: 0;
+    border-radius: 10px;
+    background: #F2F2F2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form input:hover{
+    background-color: #f9d3d3;
+    transition: all 1s ease 0s;
+}
+.form input:focus{
+    background-color: #f9d3d3;
+    transition: all 1s ease 0s;
+}
+.form button{
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 10px;
+    background: #ff0000;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    /* color: #ff0000; */
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover, .form button:active, .form button:focus{
+    background-color: #db0c0c;
+    transition: all 1s ease 0s;
+    cursor: pointer;
+}
+.form .message{
+    margin: 15px 0 0;
+    color: #B3B3B3;
+    font-size: 12px;
+}
+.form .message a{
+    color: #cf0606;
+    text-decoration: none;
+}            

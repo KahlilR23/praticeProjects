@@ -1,44 +1,138 @@
-var inputMin = document.getElementById("min").value;
-var inputSec = document.getElementById("sec").value;
 
-if(inputMin == "" || inputMin == " " ){
-    inputMin = 0;
-}
-if(inputSec == "" || inputSec == " "){
-    inputSec = 0;
-}
+//window.onload = countdown(10);
 
-let time = inputMin * 60 + inputSec;
+var myVar;
+var clock = document.getElementById("countdownTimer");
 
-let count = document.getElementById("countdownTimer");
+function countdown(val)
+{
+   
+   var counter=val;
 
-console.log(inputMin);
-console.log(inputSec);
+   
+   
 
 
-function starTime(){
-    while(time > 0){
-    setInterval(updateTimer, 1000)
+    console.log(counter);
+   myVar= setInterval(function()
+   { 
+    var ids = ["hourc", "minutesc", "secondsc"];
+
+    let hours = Math.floor(counter / 3600);
+    let minutes = Math.floor(counter % 3600 / 60);
+    let seconds = Math.floor(counter % 3600 % 60);
+    
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    var values = [hours, minutes, seconds];
+     if(counter>=0)
+     {
+       //document.getElementById("countdownTimer").innerHTML=counter;
+       document.getElementById("countdownTimer").innerHTML = `${hours}:${minutes}:${seconds}`;
+       
+       
+       //for(var i = 0; i < ids.length; i++)
+       //document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+     }
+     if(counter<0)
+     {
+       //document.getElementById("countdownTimer").innerHTML="End";
+       confetti.start();
+     }
+     
+     counter--;		
+   }, 1000)
+ 
+ }
+
+function set_count()
+{
+   //clearInterval(myVar);
+   document.getElementById("countdownTimer").style.display = "flex";
+   document.getElementById("input").style.display = "none";
+   var secs=document.getElementById("sec").value;
+   var min=document.getElementById("min").value;
+   var hour=document.getElementById("hour").value;
+
+   if(hour == "" || hour == " "){
+    hour = 0;
     }
+
+   if(min == "" || min == " "){
+         min = 0;
+     }
+   
+     if(secs == "" || secs == " "){
+        secs = 0;
+    }
+   hour = hour * 3600;
+   min = min * 60;
+   secs = secs * 1;
+   var time = hour + min + secs + 0;
+
+
+   countdown(time);
 }
-function updateTimer(){
-   // const minutes = Math.floor(time/60);
-   // let seconds = time % 60;
-   while (time > 0){
-   var minutes = inputMin;
-   var seconds = inputSec;
-   seconds = seconds < 10 ? '0' + seconds : seconds;
-   count.innerHTML = `${minutes}:${seconds}`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var min = document.getElementById("min").value;
+// var sec = document.getElementById("sec").value;
+
+// if(min == "" || min == " "){
+//     min = 0;
+// }
+// //var csec = inputSec.nodeValue;
+// var time = min * 60 + inputSec;
+
+// var count = document.getElementById("countdownTimer");
+// function starTime(val1, val2){
+    
+    
+    
+//     // if(inputSec == "" || inputSec == " "){
+//     //     inputSec = 0;
+//     // }
+    
+//     console.log(min);
+    
+
+   
+//     setInterval(updateTimer, 1000)
+    
+// }
+// function updateTimer(){
+//    //const minutes = Math.floor(time/60);
+//    //let seconds = time % 60;
+//    console.log(sec);
+//    var minutes = min;
+
+//    var seconds = sec;
+//    seconds = seconds < 10 ? '0' + seconds : seconds;
+//    count.innerHTML = `${minutes}:${seconds}`;
 
     
 
     
-    //seconds = seconds < 10 ? '0' + seconds : seconds;
-    time--;
-   }
-}
+//     //seconds = seconds < 10 ? '0' + seconds : seconds;
+//     time--;
+   
+// }
 
-var timer;
+// //var timer;
 
 
 

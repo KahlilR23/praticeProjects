@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
     <title>Countdown Timer</title>
 </head>
 <body>
-    <!-- <input type="text" id="month" placeholder="Month">
- <input type="text" id="day" placeholder="Day">
- <input type="text" id="year" placeholder="Year">
- <input type="text" id="hour" placeholder="Hour"> -->
- <!-- <input type="text" id="min" placeholder="Min">
- <input type="button" value="Submit" onclick="settimer();">
-  <p id="timer_value"></p> -->
- <!-- <p id="countdownTimer"> -->
-    <!-- <input type="text" id="min" placeholder="Min">
- <input type="button" value="Submit" onclick="updateTimer();"></p> -->
  
-    <input type="text" id="min" placeholder="Minutes"> 
-    <input type="text" id="sec" placeholder="Seconds">
-    <input type="button" value="Submit" onclick="starTime();">
-    <p id="countdownTimer"></p>
+    <!-- <form> -->
+        <div><h1>Countdown Timer</h1></div>
+        <div class="form" id="input">
+        <form>    
+    <input type="number" id="hour" placeholder="Hours">
+    <input type="number" id="min" placeholder="Minutes"> 
+    <input type="number" id="sec" placeholder="Seconds">
+    <input type="button" value="Submit" onclick="set_count();">
+        </form></div>
+    <!--digital clock start-->
+    <center><p id="countdownTimer"></p></center>
+    <!-- <div id="panel" class="datetime">
+        <div id="panel" class="time">
+        <span id="hourc">00</span>:
+        <span id="minutesc">00</span>:
+        <span id="secondsc">00</span>
+        </div>
+    </div> -->
+    <!--digital clock end-->  
+    <!-- <p id="countdown"></p> -->
+    <!-- </form>  -->
+    
     <!-- <p id="countdownTimer"></p>  -->
 </body>
-<script src="app.js"></script>
 </html>

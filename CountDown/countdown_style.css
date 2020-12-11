@@ -1,0 +1,43 @@
+body
+{
+	background-color:#1C1C1C;
+	text-align:center;
+	font-family:helvetica;
+}
+h1
+{
+	margin:0px;
+	margin-top:40px;
+	color:#ff5151;
+	font-size:45px;
+}
+p
+{
+	margin:0px;
+	margin-top:20px;
+	color:#ff5151;
+	font-size:30px;
+}
+input[type="text"]
+{
+	width:200px;
+	height:35px;
+	margin-top:10px;
+	padding:10px;
+}
+input[type="button"]
+{
+	width:50px;
+	height:35px;
+	background:none;
+	background-color:#ff5151;
+	border:none;
+	font-size:17px;
+	color:#ffffff;
+}
+#countdown
+{
+	margin-top:70px;
+	font-size:130px;
+	color:silver;
+}
